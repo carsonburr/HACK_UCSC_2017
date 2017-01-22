@@ -23,3 +23,10 @@ insecure@1.0.7                # Allow all DB writes from clients (for prototypin
 less@2.7.8
 kadira:flow-router
 kadira:blaze-layout
+accounts-ui
+accounts-password
+accounts-google
+aldeed:simple-schema
+mdg:validated-method
+dburles:collection-helpers
+aldeed:collection2
