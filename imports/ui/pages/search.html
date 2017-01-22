@@ -1,0 +1,11 @@
+<template name="app_search_page">
+	{{> search_bar}}
+	
+	<div id="search_results_container">
+		<div id="search_results">
+			{{# each results}}
+				{{> list_item}}
+			{{/each}}
+		</div>
+	</div>
+</template>

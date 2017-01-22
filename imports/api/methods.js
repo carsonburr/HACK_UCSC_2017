@@ -39,11 +39,8 @@ const ATTRACTIONS_METHODS = _.pluck([
 ], 'name');
 
 if (Meteor.isServer) {
-	/*DDPRateLimiter.addRule({
-		name(name) {
-			return _.contains(FLAVORS_METHODS, name);
-		},
-		
-		connectionId() { return true; },
-	}, 5, 1000);*/
+	Attractions._ensureIndex({
+		name: "text",
+		tags: "text",
+	});
 }

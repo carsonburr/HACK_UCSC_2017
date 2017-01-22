@@ -5,11 +5,19 @@ import '../../ui/layout/app_body.js';
 
 import '../../ui/pages/root_redirector.js';
 import '../../ui/pages/home.js';
+import '../../ui/pages/search.js';
 
 FlowRouter.route('/home', {
 	name: 'App.home_page',
 	action() {
 		BlazeLayout.render('App_body', { main: 'app_home_page' });
+	},
+});
+
+FlowRouter.route('/search', {
+	name: 'App.search_page',
+	action() {
+		BlazeLayout.render('App_body', { main: 'app_search_page' });
 	},
 });
 

@@ -3,6 +3,21 @@ import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 
 import { Attractions } from './attractions.js';
 
-Meteor.publish('attractions', function attractionsPublication(){
-	return Attractions.find();
+Meteor.publish('search', function (searchValue){
+	if (!searchValue) {
+		return Attractions.find({});
+	}
+	
+	return Attractions.find(
+	{ $text: {$search: searchValue} },
+	{
+		fields: {
+			score: {$meta: "textScore" }
+		},
+		
+		sort: {
+			score: { $meta: "textScore"}
+		}
+	}
+	);
 });
