@@ -1,6 +1,12 @@
 <template name="list_item">
 	<div id="list_item">
-		<img id="item_left" src={{picture}}>
-		<span id="item_right">{{name}}</span>
+		<div id="info">
+			<img id="item_left" src={{picture}}>
+			<span id="item_right">{{name}}</span>
+		</div>
+		<div id="buttons">
+			<button id="bucket_button">Bucket List</button>
+			<button id="memory_button">Memories</button>
+		</div>
 	</div>
 </template>

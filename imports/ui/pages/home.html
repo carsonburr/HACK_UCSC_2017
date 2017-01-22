@@ -1,24 +1,21 @@
 <template name="app_home_page">
-	<div class="container">
-	
-	<div id="wrap">
-		<div id="darken"></div>
-		<img id="bg" src="{{bg_img}}" height="1080" width="1920">
-		<h1 id="recommendation">We Recommend...</h1>
-	</div>
-	
-	<div id="buttonsection">
-		<button type="button">Beaches</button>
-		<button type="button">Restaurants</button>
-		<button type="button">Parks</button>
-	</div>
-	
-	{{> search_bar}}
-	
-	<div id="footersection">
-		<h2> footer </h2>
-	</div>
-	
-	
+	<div class="home_container">
+		
+		<a id="menu_icon" href="menu"><img src="/img/menubutton.png"></a>
+		
+		<div id="img_wrap">
+			<div id="darken"></div>
+			<img id="bg" src="{{bg_img}}" height="1080" width="1920">
+			<h1 id="recommendation">We Recommend<br>{{place}}</h1>
+		</div>
+		
+		<div id="buttonsection">
+			<button id="beach" type="button">Beaches</button>
+			<button id="museum" type="button">Museums</button>
+			<button id="park" type="button">Parks</button>
+		</div>
+		
+		{{> search_bar}}
+		
 	</div>
 </template>

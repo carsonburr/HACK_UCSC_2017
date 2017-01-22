@@ -1,0 +1,14 @@
+<template name="my_memories">
+	<a id="menu_icon" href="menu"><img src="/img/menubutton.png"></a>
+	<div id="bucket_list_title">
+		<h1>My Memories</h1>
+	</div>
+	
+	<div id="search_results_container">
+		<div id="search_results">
+			{{# each item}}
+				{{> list_item}}
+			{{/each}}
+		</div>
+	</div>
+</template>

@@ -6,6 +6,13 @@ import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { Attractions } from '../../api/attractions.js';
 import { Session } from 'meteor/session';
+import { jQuery } from 'meteor/jquery';
+
+Template.app_search_page.onCreated(function() {
+	Meteor.defer(function() {
+		$(window).scrollTop(0);
+	});
+});
 
 Template.app_search_page.helpers({
 	results() {

@@ -1,0 +1,9 @@
+<template name="main_menu">
+	<div class="menu_container">
+		<img id="bg" src="{{bg_img}}" height="1080" width="1920">
+		<div id="darken"></div>
+		{{#each links}}
+			<a href={{link}}>{{text}}</a>
+		{{/each}}
+	</div>
+</template>
